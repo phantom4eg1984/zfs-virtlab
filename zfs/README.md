@@ -126,7 +126,7 @@ zfspool4  21.7M   810M     21.5M  /zfspool4
 
 Как оказалось наилучий алгоритм сжатия для файлов такого типа оказался у gzip.
 
-2.Определить настройки pool’a.
+# 2.Определить настройки pool’a.
 загрузить архив с файлами локально. https://drive.google.com/open?id=1KRBNW33QWqbvbVHa3hLJivOAt60yukkg
 Распаковать.
 С помощью команды zfs import собрать pool ZFS;
@@ -331,7 +331,7 @@ otus  special_small_blocks  0                      default
 Какое сжатие используется: 1.00x
 Какая контрольная сумма используется: sha256
 
-3. Найти сообщение от преподавателей:
+# 3. Найти сообщение от преподавателей:
 Скачиваем файл:
 wget -O otus_task2.file --no-check-certificate 'https://drive.google.com/uc?export=download&id=1gH8gCL9y7Nd5Ti3IRmplZPF1XjzxeRAG'
 
