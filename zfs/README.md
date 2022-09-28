@@ -86,7 +86,7 @@ config:
 
 errors: No known data errors
 
-Установим алгоритм свой алгоритм компрессии для каждого из пулов:
+Установим свой алгоритм компрессии для каждого из пулов:
 [root@client ~]# zfs set compression=gzip zfspool1
 [root@client ~]# zfs set compression=zle zfspool2
 [root@client ~]# zfs set compression=lz4 zfspool3
@@ -164,7 +164,7 @@ status: Some supported features are not enabled on the pool.
 	    /zfsexport/zpoolexport/filea  ONLINE
 	    /zfsexport/zpoolexport/fileb  ONLINE
 
-Импортируе пул:
+Импортируем пул:
 [root@client zfsexport]# zpool import -d zpoolexport/ otus
 
 Проверяем статус пула:
@@ -335,10 +335,10 @@ otus  special_small_blocks  0                      default
 Скачиваем файл:
 wget -O otus_task2.file --no-check-certificate 'https://drive.google.com/uc?export=download&id=1gH8gCL9y7Nd5Ti3IRmplZPF1XjzxeRAG'
 
-Восстанавилваем файлы из нашего файлы который мы скачали:
+Восстанавилваем файлы из нашего файла который мы скачали:
 [root@client ~]# zfs receive otus/snapshot < otus_task2.file
 
-Находим файл с именем secret_message как указано в задании:
+Находим файл с именем secret_message:
 [root@client task1]# find /otus/snapshot -name "secret_message"
 
 Находим секретное сообщение:
